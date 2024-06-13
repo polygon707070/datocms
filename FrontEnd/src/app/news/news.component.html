@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row login-container">
+    <div class="col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-xs-10 offset-xs-1 col-xl-6 offset-xl-3 text-center">
+      <h3 class="login-title">Test buttons visibility</h3>
+      <dx-button *ngIf="userService.userSessionData.userPermissions.canEditArticles" 
+                 text="(Editor)" 
+                 class="login-button"></dx-button><br>
+      <hr>
+      <dx-button *ngIf="userService.userSessionData.userPermissions.canEditTags" 
+                 text="(Manager)" 
+                 class="login-button"></dx-button><br>
+      <hr>
+      <dx-button *ngIf="userService.userSessionData.userPermissions.canEditKeyWords" 
+                 text="(Manager and Editor)" 
+                 class="login-button"></dx-button><br>
+      <hr>
+      <dx-button *ngIf="userService.loggedIn" 
+                 text="(Any authorized)" 
+                 class="login-button"></dx-button><br>
+      <hr>
+      <dx-button text="(Open)" 
+                 class="login-button"></dx-button><br>
+      <hr>
+  </div>
+</div>
