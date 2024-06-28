@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row login-container">
+    <div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-xs-10 offset-xs-1 col-xl-4 offset-xl-4 text-center">
+      <dx-validation-group #loginValidationGroup>
+        <h3 class="login-title">Врата</h3>
+        <div *ngIf="invalidLogin" class="invalid-login-message">{{errorMessage}}</div><br/>
+        <dx-text-box class="login-form-camp" 
+                    placeholder="Nomine"
+                    [(value)]="loginData.userName">
+            <dx-validator>
+                <dxi-validation-rule type="required"></dxi-validation-rule>
+            </dx-validator>
+        </dx-text-box>
+        <dx-text-box class="login-form-camp" 
+                    placeholder="Тайное знание" 
+                    mode="password"
+                    [(value)]="loginData.password">
+            <dx-validator>
+                <dxi-validation-rule type="required"></dxi-validation-rule>
+            </dx-validator>
+        </dx-text-box>
+        <dx-button text="Материализоваться" 
+                  class="login-button"
+                  (onClick)="login()"></dx-button>
+      </dx-validation-group>
+    </div>
+  </div>
+</div>
