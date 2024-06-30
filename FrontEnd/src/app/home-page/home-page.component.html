@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <div class="row login-container">
+    <div class="col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-xs-10 offset-xs-1 col-xl-6 offset-xl-3 text-center">
+      <h3 class="login-title">Test Web-API</h3>
+      <dx-button text="Check is autenticated" 
+                 class="login-button"
+                 (onClick)="checkIsAutenticated()"></dx-button><br>
+      <hr>
+      <dx-button text="get user permissions" 
+                 class="login-button"
+                 (onClick)="getUserPermissions()"></dx-button><br>
+      <hr>
+      <dx-button text="Get Articles (Editor)" 
+                 class="login-button"
+                 (onClick)="getArticlesList()"></dx-button><br>
+      <hr>
+      <dx-button text="Get Articles Tags (Manager)" 
+                 class="login-button"
+                 (onClick)="getArticlesTags()"></dx-button><br>
+      <hr>
+      <dx-button text="Get Key Words (Manager and Editor)" 
+                 class="login-button"
+                 (onClick)="getArticlesKeyWords()"></dx-button><br>
+      <hr>
+      <dx-button text="Get Comments (Any authorized)" 
+                 class="login-button"
+                 (onClick)="getArticlesComments()"></dx-button><br>
+      <hr>
+      <dx-button text="Get Articles Categories (Open)" 
+                 class="login-button"
+                 (onClick)="getArticlesCategories()"></dx-button><br>
+      <hr>
+  </div>
+</div>
