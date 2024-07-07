@@ -1,0 +1,126 @@
+<div class="container-fluid header-menu">
+    <div class="row">
+        <div class="col">
+            <i class="fa fa-2x fa-bars menu-toggle-button" aria-hidden="true" (click)="toggleLeftMenu()"></i>
+        </div>
+        <div class="col text-center">
+            <a routerLink="/home">
+                <img class="logo-image" src="./assets/images/fiery-lotos-logo.png" alt="Fiery Lotos"/>
+            </a>
+        </div>
+        <div class="col text-right">
+            <div class="header-menu-right-button">
+                <a title="User" routerLink="/login">
+                    <i class="fa fa-user fa-2x"></i>
+                    <span>Lotos</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div #menuAndContentWrapper class="menu-and-content-wrapper">
+    <div [ngStyle]="{'min-height': contentHeight+'px'}" class="menu-left" [hidden]="!isLeftMenuVisible">
+        <ul>
+            <li [ngClass]="{'open': isSchedeMenuOpened}">
+                <a class="cursor" data-toggle="collapse" data-target="#menu-category1" (click)="toggleSchedeMenuArrow()">
+                    <div>
+                        <i class="fa fa-address-card-o"></i> Test
+                        <i class="fa pull-right" [ngClass]="{'fa-angle-right': isSchedeMenuOpened, 'fa-angle-down': !isSchedeMenuOpened}"></i>
+                    </div>
+                </a>
+                <ul id="menu-category1" class="collapse in">
+                    <li routerLink="/home" routerLinkActive="active-sub-menu">
+                        <a>Test functions</a>
+                    </li>
+                    <li routerLink="/news" routerLinkActive="active-sub-menu">
+                        <a>Test visibility</a>
+                    </li>
+                    <li>
+                        <a>Item 2</a>
+                    </li>
+                    <li>
+                        <a>Item 3</a>
+                    </li>
+                    <li>
+                        <a>Item 4</a>
+                    </li>
+                    <li>
+                        <a>Item 5</a>
+                    </li>
+                    <li>
+                        <a>Item 6</a>
+                    </li>
+                    <li>
+                        <a>Item 7</a>
+                    </li>
+                    <li>
+                        <a>Item 8</a>
+                    </li>
+                    <li>
+                        <a>Item 9</a>
+                    </li>
+                </ul>
+            </li>
+            <li [ngClass]="{'open': isRegistrazioneMenuOpened}">
+                <a class="cursor" data-toggle="collapse" data-target="#menu-category2" (click)="toggleRegistrazioneMenuArrow()">
+                    <i class="fa fa-handshake-o"></i> Test Web-API routes
+                    <i class="fa pull-right" [ngClass]="{'fa-angle-right': isRegistrazioneMenuOpened, 'fa-angle-down': !isRegistrazioneMenuOpened}"></i>
+                </a>
+                <ul id="menu-category2" class="collapse in">
+                    <li routerLink="/manage-articles" routerLinkActive="active-sub-menu">
+                        <a>Articles (Editor)</a>
+                    </li>
+                    <li routerLink="/manage-tags" routerLinkActive="active-sub-menu">
+                        <a>Tags (Manager)</a>
+                    </li>
+                    <li routerLink="/manage-key-words" routerLinkActive="active-sub-menu">
+                        <a>Key Words (Manager, Editor)</a>
+                    </li>
+                    <li routerLink="/manage-comments" routerLinkActive="active-sub-menu">
+                        <a>Comments (Any authorized)</a>
+                    </li>
+                    <li routerLink="/user-profile" routerLinkActive="active-sub-menu">
+                        <a>Profile (any authorizrd)</a>
+                    </li>
+                </ul>
+            </li>
+            <li [ngClass]="{'open': isReportMenuOpened}">
+                <a class="cursor" data-toggle="collapse" data-target="#menu-category3" (click)="toggleReportMenuArrow()">
+                    <i class="fa fa-file-text-o"></i> Category 3
+                    <i class="fa pull-right" [ngClass]="{'fa-angle-right': isReportMenuOpened, 'fa-angle-down': !isReportMenuOpened}"></i>
+                </a>
+                <ul id="menu-category3" class="collapse in">
+                    <li>
+                        <a>Item 1</a>
+                    </li>
+                    <li>
+                        <a>Item 2</a>
+                    </li>
+                    <li>
+                        <a>Item 3</a>
+                    </li>
+                    <li>
+                        <a>Item 4</a>
+                    </li>
+                    <li>
+                        <a>Item 5</a>
+                    </li>
+                    <li>
+                        <a>Item 6</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+
+    <div #content [ngClass]="{'main-content': isLeftMenuVisible}">
+        <router-outlet></router-outlet>
+        <div [ngClass]="{'show-scroll': showScroll}" 
+                (click)="scrollToTop()" 
+                class="scroll-to-top scroll-button">
+          <i class="fa fa-arrow-up"></i> вверх
+        </div>
+        <app-loader></app-loader>
+    </div>
+</div>
