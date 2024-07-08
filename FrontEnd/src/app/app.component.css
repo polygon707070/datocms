@@ -1,0 +1,141 @@
+.logo-image {
+    height: 50px;
+}
+
+.logo-image-link:hover {
+    cursor: pointer;
+}
+
+.header-menu {
+    background-color: black;
+    border-bottom: 1px solid white;
+    height: 70px;
+    padding-top: 8px;
+}
+
+    .header-menu .menu-toggle-button {
+        float: left;
+        cursor: pointer;
+        border: 2px solid #F0F3F6;
+        padding: 5px;
+        color: #F0F3F6;
+        border-radius: 4px;
+        margin-top: 5px;
+    }
+
+.header-menu-right-button {
+    float: right;
+    text-align: center;
+    color: #F0F3F6;
+}
+
+.header-menu-right-button:hover {
+    cursor: pointer;
+}
+
+    .header-menu-right-button span {
+        display: block;
+    }
+
+    .header-menu-right-button a,
+    .header-menu-right-button a:hover,
+    .header-menu-right-button a:active,
+    .header-menu-right-button a:visited,
+    .header-menu-right-button a:focus {
+        color: inherit;
+        text-decoration: none;
+    }
+
+.menu-left {
+    float: left;
+    padding-top: 10px;
+    top: 70px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: black;
+    border-right: 1px solid white;
+    width: 240px;
+    font-size: 14px;
+}
+
+    .menu-left ul li {
+        list-style: none;
+        padding-left: 17px !important;
+        padding: 4px 0 4px 0;
+        cursor: pointer;
+        outline: 0;
+    }
+
+        .menu-left ul li a {
+            color: #F0F3F6 !important;
+        }
+
+            .menu-left ul li a:hover {
+                font-weight: bold !important;
+            }
+
+            .menu-left ul li a.active {
+                color: #29abe2 !important;
+                font-weight: bold !important;
+            }
+
+    .menu-left > ul {
+        padding-left: 0 !important;
+    }
+
+        .menu-left > ul > li > ul {
+            padding-left: 4px !important;
+        }
+
+    .menu-left i.pull-right {
+        padding-top: 2px;
+        padding-right: 10px;
+        font-size: 18px;
+    }
+
+.main-content {
+    float: left;
+    width: calc(100% - 240px);
+}
+
+.cliccable {
+    cursor: pointer;
+}
+
+.menu-and-content-wrapper{
+    height: calc(100% - 70px);
+}
+
+.scroll-button {
+    background: black;
+    color: #999;
+    padding: 9px;
+    border: 1px solid #999;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.scroll-button:hover {
+    color: white;
+    border: 1px solid white;
+}
+  
+.scroll-to-top {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+
+.show-scroll {
+    opacity: 1;
+}
+
+.active-sub-menu {
+    font-weight: bold;
+}
